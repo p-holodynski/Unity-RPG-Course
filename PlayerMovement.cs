@@ -18,12 +18,14 @@ public class PlayerMovement : MonoBehaviour
         currentClickTarget = transform.position;
     }
 
+    // TODO fix issue with click to move and WSAD conflicting and increasing speed
+
     // Fixed update is called in sync with physics
     private void FixedUpdate()
     {
         if (Input.GetMouseButton(0))
         {
-            print("Cursor raycast hit" + cameraRaycaster.hit.collider.gameObject.name.ToString());
+            //print("Cursor raycast hit" + cameraRaycaster.hit.collider.gameObject.name.ToString());
             switch (cameraRaycaster.layerHit)
             {
                 case Layer.Walkable:
