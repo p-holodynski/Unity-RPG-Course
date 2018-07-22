@@ -111,8 +111,9 @@ public class PlayerMovement : MonoBehaviour
         Gizmos.DrawSphere(clickPoint, 0.15f);
 
         // Draw attack sphere
-        Gizmos.color = new Color(255f, 0f, 0, .5f);
-        Gizmos.DrawWireSphere(transform.position, attackMoveStopRadius);
+        //Gizmos.color = new Color(255f, 0f, 0, .5f);
+        //Gizmos.DrawWireSphere(transform.position, attackMoveStopRadius);
+        UnityEditor.Handles.DrawWireDisc(transform.position, transform.up, attackMoveStopRadius);
     }
 }
 
